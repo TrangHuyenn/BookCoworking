@@ -18,7 +18,8 @@ class TabBarViewController: UITabBarController {
     func setUpTabBar() {
         
         let homeVC = HomeViewController()
-        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        let navHome = UINavigationController(rootViewController: homeVC)
+        navHome.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
         let listCoworkingVC = ListCoworkingViewController()
         let navListCoworking = UINavigationController(rootViewController: listCoworkingVC)
@@ -29,7 +30,7 @@ class TabBarViewController: UITabBarController {
         navProfile.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
         
         UITabBar.appearance().tintColor = UIColor().mainColor()
-        setViewControllers([homeVC, navListCoworking, navProfile], animated: true)
+        setViewControllers([navHome, navListCoworking, navProfile], animated: true)
         
     }
     

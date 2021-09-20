@@ -10,5 +10,6 @@ pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'ProgressHUD'
-
+pod 'DropDown'
+pod 'JTAppleCalendar'
 end

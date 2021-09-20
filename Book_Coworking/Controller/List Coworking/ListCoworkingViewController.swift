@@ -12,9 +12,15 @@ class ListCoworkingViewController: UIViewController {
     private var searchView: UISearchBar = {
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.borderWidth = 1
+        search.layer.borderColor = #colorLiteral(red: 0.8745098039, green: 0.6156862745, blue: 0.3803921569, alpha: 1)
+        search.layer.cornerRadius = 20
+        search.searchBarStyle = .default
+        search.backgroundImage = UIImage()
+        search.searchTextField.backgroundColor = .clear
         return search
     }()
-    
+
     private var tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -37,8 +43,8 @@ class ListCoworkingViewController: UIViewController {
     
     func setUpLayout() {
         searchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        searchView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        searchView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        searchView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        searchView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         searchView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         tableView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 10).isActive = true
