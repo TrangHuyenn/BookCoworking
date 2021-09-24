@@ -9,6 +9,7 @@ import UIKit
 
 class ListCell: UITableViewCell {
 
+    @IBOutlet weak var imgDes: UIImageView!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var labelNameCoworking: UILabel!
@@ -17,6 +18,7 @@ class ListCell: UITableViewCell {
         didSet {
             labelNameCoworking.text = coworking?.name
             labelAddress.text = coworking?.address
+            labelAddress.numberOfLines = 0
             labelRate.text = "\(coworking?.rate ?? 0)"
         }
     }

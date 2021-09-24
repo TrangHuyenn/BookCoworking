@@ -9,10 +9,13 @@ import UIKit
 
 class DetailCoworkingViewController: UIViewController {
     
+    @IBOutlet weak var lbAddress: UILabel!
+    @IBOutlet weak var lbDescription: UILabel!
+    @IBOutlet weak var lbPrice: UILabel!
     @IBOutlet weak var imageColletionDetail: UICollectionView!
     
-    var imagesDetail = ["img_Toong", "img_Toong","img_Toong","img_Toong"]
-    
+    var index: Int = 0
+
     let button = UIButton().button(text: "Book Now")
     
     override func viewDidLoad() {
@@ -21,7 +24,7 @@ class DetailCoworkingViewController: UIViewController {
         view.addSubview(button)
         tabBarController?.tabBar.isHidden = true
         setupLayout()
-        
+        configData()
         button.addTarget(self, action: #selector(didTapButtonBook), for: .touchUpInside)
         navigationController?.isNavigationBarHidden = false
     }
@@ -30,6 +33,14 @@ class DetailCoworkingViewController: UIViewController {
         imageColletionDetail.delegate = self
         imageColletionDetail.dataSource = self
         imageColletionDetail.register(UINib(nibName: "ImageCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionCell")
+    }
+    
+    func configData() {
+        lbAddress.text = coworkingsList[index].address
+        lbDescription.text = coworkingsList[index].description
+        lbDescription.numberOfLines = 0
+        lbPrice.text = "\(coworkingsList[index].price)đ /Hour"
+        lbPrice.textColor = UIColor().mainColor()
     }
     
     func setupLayout(){
@@ -41,6 +52,7 @@ class DetailCoworkingViewController: UIViewController {
     
     @objc func didTapButtonBook(){
         let vc = BookViewController()
+        vc.index = index
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -48,12 +60,12 @@ class DetailCoworkingViewController: UIViewController {
 
 extension DetailCoworkingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesDetail.count
+        return coworkingsList[index].images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionCell", for: indexPath) as? ImageCollectionCell
-        cell?.imgSlide.image = UIImage(named: "\(imagesDetail[indexPath.row])")
+        cell?.imgSlide.image = UIImage(named: "\(coworkingsList[index].images[indexPath.row])")
         return cell!
     }
 }

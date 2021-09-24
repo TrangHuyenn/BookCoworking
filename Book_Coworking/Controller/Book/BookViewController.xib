@@ -20,15 +20,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xag-1M-o1b">
-                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="380"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="380" id="krw-sJ-fk0"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Xag-1M-o1b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="59e-oA-ZTl"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Xag-1M-o1b" secondAttribute="bottom" constant="50" id="ZGU-H7-567"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xag-1M-o1b" secondAttribute="trailing" id="ZhG-wr-7w3"/>
                 <constraint firstItem="Xag-1M-o1b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="c5y-ps-zlW"/>
             </constraints>

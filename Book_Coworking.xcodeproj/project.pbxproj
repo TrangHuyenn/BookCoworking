@@ -9,7 +9,23 @@
 /* Begin PBXBuildFile section */
 		0C31FDA526EFB04A00C51447 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C31FDA326EFB04A00C51447 /* CardCell.swift */; };
 		0C31FDA626EFB04B00C51447 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C31FDA426EFB04A00C51447 /* CardCell.xib */; };
+		0C46635E26FC97AD00E2F50A /* VoucherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46635C26FC97AD00E2F50A /* VoucherController.swift */; };
+		0C46635F26FC97AD00E2F50A /* VoucherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46635D26FC97AD00E2F50A /* VoucherController.xib */; };
+		0C46636326FC987B00E2F50A /* VoucherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46636126FC987B00E2F50A /* VoucherCell.swift */; };
+		0C46636426FC987B00E2F50A /* VoucherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46636226FC987B00E2F50A /* VoucherCell.xib */; };
+		0C46636726FCE13000E2F50A /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46636526FCE13000E2F50A /* PromotionCell.swift */; };
+		0C46636826FCE13000E2F50A /* PromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46636626FCE13000E2F50A /* PromotionCell.xib */; };
 		0C550AD926F49F51002F21DE /* EntityPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C550AD826F49F51002F21DE /* EntityPopup.swift */; };
+		0C89004126F9DF400073821B /* TotalMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89003F26F9DF400073821B /* TotalMoney.swift */; };
+		0C89004226F9DF400073821B /* TotalMoney.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89004026F9DF400073821B /* TotalMoney.xib */; };
+		0C89004526F9E0440073821B /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89004326F9E0440073821B /* PaymentMethodCell.swift */; };
+		0C89004626F9E0440073821B /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89004426F9E0440073821B /* PaymentMethodCell.xib */; };
+		0C89004A26FA2F140073821B /* PaymentSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89004826FA2F140073821B /* PaymentSuccess.swift */; };
+		0C89004B26FA2F140073821B /* PaymentSuccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89004926FA2F140073821B /* PaymentSuccess.xib */; };
+		0C89004F26FA32E80073821B /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89004D26FA32E80073821B /* OrderManager.swift */; };
+		0C89005026FA32E80073821B /* OrderManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89004E26FA32E80073821B /* OrderManager.xib */; };
+		0C89005326FA3E160073821B /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89005126FA3E160073821B /* OrderCell.swift */; };
+		0C89005426FA3E160073821B /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89005226FA3E160073821B /* OrderCell.xib */; };
 		0C926A5C26ED05B800FE4ABA /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C926A5A26ED05B800FE4ABA /* SlideCell.swift */; };
 		0C926A5D26ED05B800FE4ABA /* SlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C926A5B26ED05B800FE4ABA /* SlideCell.xib */; };
 		0CA63C8326F1021F00C94C8D /* DetailCoworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA63C8126F1021F00C94C8D /* DetailCoworkingViewController.swift */; };
@@ -31,6 +47,15 @@
 		0CC479BD26E524E4000B8848 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479BC26E524E4000B8848 /* Data.swift */; };
 		0CC9735C26F8930A006FF8E2 /* PaymentConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9735A26F8930A006FF8E2 /* PaymentConfirmController.swift */; };
 		0CC9735D26F8930A006FF8E2 /* PaymentConfirmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC9735B26F8930A006FF8E2 /* PaymentConfirmController.xib */; };
+		0CC9736126F89937006FF8E2 /* InforCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9735F26F89937006FF8E2 /* InforCell.swift */; };
+		0CC9736226F89937006FF8E2 /* InforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC9736026F89937006FF8E2 /* InforCell.xib */; };
+		0CC9736426F8D5E3006FF8E2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9736326F8D5E3006FF8E2 /* Order.swift */; };
+		0CC9736726F8EFDE006FF8E2 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9736526F8EFDE006FF8E2 /* ServiceCell.swift */; };
+		0CC9736826F8EFDE006FF8E2 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC9736626F8EFDE006FF8E2 /* ServiceCell.xib */; };
+		0CC9736B26F8F4AD006FF8E2 /* PolicyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC9736926F8F4AD006FF8E2 /* PolicyCell.swift */; };
+		0CC9736C26F8F4AD006FF8E2 /* PolicyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC9736A26F8F4AD006FF8E2 /* PolicyCell.xib */; };
+		0CD61F3826FAF47200D784C5 /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD61F3626FAF47200D784C5 /* SearchBarController.swift */; };
+		0CD61F3926FAF47200D784C5 /* SearchBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD61F3726FAF47200D784C5 /* SearchBarController.xib */; };
 		0CD73B0C26F244550096E5CA /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD73B0A26F244550096E5CA /* ImageCollectionCell.swift */; };
 		0CD73B0D26F244550096E5CA /* ImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */; };
 		0CE0747C26F5DDEF00227029 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0747A26F5DDEF00227029 /* CalendarCell.swift */; };
@@ -62,7 +87,23 @@
 /* Begin PBXFileReference section */
 		0C31FDA326EFB04A00C51447 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		0C31FDA426EFB04A00C51447 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		0C46635C26FC97AD00E2F50A /* VoucherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherController.swift; sourceTree = "<group>"; };
+		0C46635D26FC97AD00E2F50A /* VoucherController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoucherController.xib; sourceTree = "<group>"; };
+		0C46636126FC987B00E2F50A /* VoucherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCell.swift; sourceTree = "<group>"; };
+		0C46636226FC987B00E2F50A /* VoucherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoucherCell.xib; sourceTree = "<group>"; };
+		0C46636526FCE13000E2F50A /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
+		0C46636626FCE13000E2F50A /* PromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCell.xib; sourceTree = "<group>"; };
 		0C550AD826F49F51002F21DE /* EntityPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityPopup.swift; sourceTree = "<group>"; };
+		0C89003F26F9DF400073821B /* TotalMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMoney.swift; sourceTree = "<group>"; };
+		0C89004026F9DF400073821B /* TotalMoney.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalMoney.xib; sourceTree = "<group>"; };
+		0C89004326F9E0440073821B /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		0C89004426F9E0440073821B /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
+		0C89004826FA2F140073821B /* PaymentSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSuccess.swift; sourceTree = "<group>"; };
+		0C89004926FA2F140073821B /* PaymentSuccess.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentSuccess.xib; sourceTree = "<group>"; };
+		0C89004D26FA32E80073821B /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		0C89004E26FA32E80073821B /* OrderManager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderManager.xib; sourceTree = "<group>"; };
+		0C89005126FA3E160073821B /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		0C89005226FA3E160073821B /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		0C926A5A26ED05B800FE4ABA /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		0C926A5B26ED05B800FE4ABA /* SlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCell.xib; sourceTree = "<group>"; };
 		0CA63C8126F1021F00C94C8D /* DetailCoworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoworkingViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +125,15 @@
 		0CC479BC26E524E4000B8848 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0CC9735A26F8930A006FF8E2 /* PaymentConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmController.swift; sourceTree = "<group>"; };
 		0CC9735B26F8930A006FF8E2 /* PaymentConfirmController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentConfirmController.xib; sourceTree = "<group>"; };
+		0CC9735F26F89937006FF8E2 /* InforCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforCell.swift; sourceTree = "<group>"; };
+		0CC9736026F89937006FF8E2 /* InforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforCell.xib; sourceTree = "<group>"; };
+		0CC9736326F8D5E3006FF8E2 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		0CC9736526F8EFDE006FF8E2 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		0CC9736626F8EFDE006FF8E2 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		0CC9736926F8F4AD006FF8E2 /* PolicyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyCell.swift; sourceTree = "<group>"; };
+		0CC9736A26F8F4AD006FF8E2 /* PolicyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PolicyCell.xib; sourceTree = "<group>"; };
+		0CD61F3626FAF47200D784C5 /* SearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
+		0CD61F3726FAF47200D784C5 /* SearchBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarController.xib; sourceTree = "<group>"; };
 		0CD73B0A26F244550096E5CA /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionCell.xib; sourceTree = "<group>"; };
 		0CE0747A26F5DDEF00227029 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
@@ -128,6 +178,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C46635B26FC979400E2F50A /* Voucher */ = {
+			isa = PBXGroup;
+			children = (
+				0C46636026FC985900E2F50A /* Cell */,
+				0C46635C26FC97AD00E2F50A /* VoucherController.swift */,
+				0C46635D26FC97AD00E2F50A /* VoucherController.xib */,
+			);
+			path = Voucher;
+			sourceTree = "<group>";
+		};
+		0C46636026FC985900E2F50A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C46636126FC987B00E2F50A /* VoucherCell.swift */,
+				0C46636226FC987B00E2F50A /* VoucherCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0C89004726FA2EC30073821B /* Payment Success */ = {
+			isa = PBXGroup;
+			children = (
+				0C89004826FA2F140073821B /* PaymentSuccess.swift */,
+				0C89004926FA2F140073821B /* PaymentSuccess.xib */,
+			);
+			path = "Payment Success";
+			sourceTree = "<group>";
+		};
+		0C89004C26FA32C10073821B /* Order Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0C89005526FA3F410073821B /* Cell */,
+				0C89004D26FA32E80073821B /* OrderManager.swift */,
+				0C89004E26FA32E80073821B /* OrderManager.xib */,
+			);
+			path = "Order Manager";
+			sourceTree = "<group>";
+		};
+		0C89005526FA3F410073821B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C89005126FA3E160073821B /* OrderCell.swift */,
+				0C89005226FA3E160073821B /* OrderCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0C926A5726ED041700FE4ABA /* Collection Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +276,39 @@
 		0CC9735926F892E4006FF8E2 /* Payment Confirm */ = {
 			isa = PBXGroup;
 			children = (
+				0CC9735E26F89918006FF8E2 /* Cell */,
 				0CC9735A26F8930A006FF8E2 /* PaymentConfirmController.swift */,
 				0CC9735B26F8930A006FF8E2 /* PaymentConfirmController.xib */,
 			);
 			path = "Payment Confirm";
+			sourceTree = "<group>";
+		};
+		0CC9735E26F89918006FF8E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0CC9735F26F89937006FF8E2 /* InforCell.swift */,
+				0CC9736026F89937006FF8E2 /* InforCell.xib */,
+				0CC9736526F8EFDE006FF8E2 /* ServiceCell.swift */,
+				0CC9736626F8EFDE006FF8E2 /* ServiceCell.xib */,
+				0CC9736926F8F4AD006FF8E2 /* PolicyCell.swift */,
+				0CC9736A26F8F4AD006FF8E2 /* PolicyCell.xib */,
+				0C89003F26F9DF400073821B /* TotalMoney.swift */,
+				0C89004026F9DF400073821B /* TotalMoney.xib */,
+				0C89004326F9E0440073821B /* PaymentMethodCell.swift */,
+				0C89004426F9E0440073821B /* PaymentMethodCell.xib */,
+				0C46636526FCE13000E2F50A /* PromotionCell.swift */,
+				0C46636626FCE13000E2F50A /* PromotionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0CD61F3526FAF40C00D784C5 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				0CD61F3626FAF47200D784C5 /* SearchBarController.swift */,
+				0CD61F3726FAF47200D784C5 /* SearchBarController.xib */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		0CE0747E26F5E13300227029 /* SubCell */ = {
@@ -254,6 +380,7 @@
 			children = (
 				0CC479BA26E51E49000B8848 /* Coworking.swift */,
 				0CC479BC26E524E4000B8848 /* Data.swift */,
+				0CC9736326F8D5E3006FF8E2 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +388,10 @@
 		0CEB35CB26E2743B003B5114 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C46635B26FC979400E2F50A /* Voucher */,
+				0CD61F3526FAF40C00D784C5 /* SearchBar */,
+				0C89004C26FA32C10073821B /* Order Manager */,
+				0C89004726FA2EC30073821B /* Payment Success */,
 				0CC9735926F892E4006FF8E2 /* Payment Confirm */,
 				0CC479BE26E52A5A000B8848 /* Detail Coworking */,
 				0CC356FD26E3C46400133290 /* TabBar */,
@@ -400,26 +531,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C31FDA626EFB04B00C51447 /* CardCell.xib in Resources */,
+				0C89004626F9E0440073821B /* PaymentMethodCell.xib in Resources */,
 				0CC3570326E3DECE00133290 /* ListCell.xib in Resources */,
 				0CEB35EE26E28246003B5114 /* ProfileViewController.xib in Resources */,
 				0CAF0C6926F38AE600BCC766 /* EnterInforBookingCell.xib in Resources */,
+				0CC9736226F89937006FF8E2 /* InforCell.xib in Resources */,
 				0CD73B0D26F244550096E5CA /* ImageCollectionCell.xib in Resources */,
 				0CEB35E726E276E1003B5114 /* BookViewController.xib in Resources */,
 				0CAF0C6D26F38B0100BCC766 /* AddressCell.xib in Resources */,
 				0CC9735D26F8930A006FF8E2 /* PaymentConfirmController.xib in Resources */,
 				0CAF0C6526F38A8C00BCC766 /* CalendarBookingCell.xib in Resources */,
+				0CC9736826F8EFDE006FF8E2 /* ServiceCell.xib in Resources */,
 				0CEB35C026E273AD003B5114 /* LaunchScreen.storyboard in Resources */,
 				0CE0748626F64DA400227029 /* CalendarSectionHeaderView.xib in Resources */,
 				0CE0748226F5F88400227029 /* PopupSetDateTime.xib in Resources */,
+				0C89005426FA3E160073821B /* OrderCell.xib in Resources */,
 				0C926A5D26ED05B800FE4ABA /* SlideCell.xib in Resources */,
+				0C89004226F9DF400073821B /* TotalMoney.xib in Resources */,
+				0C46636826FCE13000E2F50A /* PromotionCell.xib in Resources */,
 				0CEB35E226E276B1003B5114 /* ListCoworkingViewController.xib in Resources */,
 				0CE0747D26F5DDEF00227029 /* CalendarCell.xib in Resources */,
 				0CA63C8426F1021F00C94C8D /* DetailCoworkingViewController.xib in Resources */,
 				0CAF0C7126F3969100BCC766 /* SelectTimeCell.xib in Resources */,
+				0C89004B26FA2F140073821B /* PaymentSuccess.xib in Resources */,
 				0CEB35BD26E273AD003B5114 /* Assets.xcassets in Resources */,
 				0CEB35F226E28325003B5114 /* GoogleService-Info.plist in Resources */,
+				0C46635F26FC97AD00E2F50A /* VoucherController.xib in Resources */,
+				0C89005026FA32E80073821B /* OrderManager.xib in Resources */,
 				0CAF0C6126F38A6600BCC766 /* RoomTypeCell.xib in Resources */,
+				0C46636426FC987B00E2F50A /* VoucherCell.xib in Resources */,
 				0CEB35DA26E27652003B5114 /* HomeViewController.xib in Resources */,
+				0CC9736C26F8F4AD006FF8E2 /* PolicyCell.xib in Resources */,
+				0CD61F3926FAF47200D784C5 /* SearchBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,34 +615,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC9736126F89937006FF8E2 /* InforCell.swift in Sources */,
 				0CE0748526F64DA400227029 /* CalendarSectionHeaderView.swift in Sources */,
 				0CAF0C6C26F38B0100BCC766 /* AddressCell.swift in Sources */,
 				0CEB35E126E276B1003B5114 /* ListCoworkingViewController.swift in Sources */,
+				0CC9736726F8EFDE006FF8E2 /* ServiceCell.swift in Sources */,
 				0CE0748126F5F88400227029 /* PopupSetDateTime.swift in Sources */,
 				0CE4EFDF26E904FD0035FB39 /* RegisterViewControllerr.swift in Sources */,
 				0CAF0C6826F38AE600BCC766 /* EnterInforBookingCell.swift in Sources */,
 				0CE0747C26F5DDEF00227029 /* CalendarCell.swift in Sources */,
+				0CD61F3826FAF47200D784C5 /* SearchBarController.swift in Sources */,
+				0C89004526F9E0440073821B /* PaymentMethodCell.swift in Sources */,
 				0CE26CEB26EAFF43005EBD94 /* UIButton.swift in Sources */,
 				0C550AD926F49F51002F21DE /* EntityPopup.swift in Sources */,
 				0CEB35B426E273AC003B5114 /* AppDelegate.swift in Sources */,
 				0CEB35B626E273AC003B5114 /* SceneDelegate.swift in Sources */,
+				0CC9736426F8D5E3006FF8E2 /* Order.swift in Sources */,
 				0CEB35E626E276E1003B5114 /* BookViewController.swift in Sources */,
 				0C31FDA526EFB04A00C51447 /* CardCell.swift in Sources */,
 				0CC9735C26F8930A006FF8E2 /* PaymentConfirmController.swift in Sources */,
 				0CE4EFE226E916D40035FB39 /* UICollor.swift in Sources */,
 				0CAF0C7026F3969100BCC766 /* SelectTimeCell.swift in Sources */,
+				0C89005326FA3E160073821B /* OrderCell.swift in Sources */,
 				0CC3570226E3DECE00133290 /* ListCell.swift in Sources */,
 				0CEB35ED26E28246003B5114 /* ProfileViewController.swift in Sources */,
+				0C46635E26FC97AD00E2F50A /* VoucherController.swift in Sources */,
 				0CAF0C6026F38A6600BCC766 /* RoomTypeCell.swift in Sources */,
 				0CAF0C6426F38A8C00BCC766 /* CalendarBookingCell.swift in Sources */,
+				0C89004F26FA32E80073821B /* OrderManager.swift in Sources */,
 				0CC479BD26E524E4000B8848 /* Data.swift in Sources */,
 				0C926A5C26ED05B800FE4ABA /* SlideCell.swift in Sources */,
 				0CC479BB26E51E49000B8848 /* Coworking.swift in Sources */,
 				0CA63C8326F1021F00C94C8D /* DetailCoworkingViewController.swift in Sources */,
+				0C46636326FC987B00E2F50A /* VoucherCell.swift in Sources */,
+				0CC9736B26F8F4AD006FF8E2 /* PolicyCell.swift in Sources */,
 				0CC356FC26E3C45D00133290 /* TabBarViewController.swift in Sources */,
+				0C89004126F9DF400073821B /* TotalMoney.swift in Sources */,
 				0CD73B0C26F244550096E5CA /* ImageCollectionCell.swift in Sources */,
 				0CE26CED26EB0F1C005EBD94 /* UITextField.swift in Sources */,
 				0CEB35D926E27652003B5114 /* HomeViewController.swift in Sources */,
+				0C89004A26FA2F140073821B /* PaymentSuccess.swift in Sources */,
+				0C46636726FCE13000E2F50A /* PromotionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

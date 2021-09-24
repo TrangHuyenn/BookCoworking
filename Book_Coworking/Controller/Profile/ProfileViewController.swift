@@ -30,6 +30,13 @@ class ProfileViewController: UIViewController {
         fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        navigationController?.isNavigationBarHidden = false
+    
+    }
+    
     @objc func didTabSignOut() {
         try? Auth.auth().signOut()
         let senceDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate
@@ -54,7 +61,7 @@ class ProfileViewController: UIViewController {
         
         changeImageAvata()
     }
-    
+    //MARK: - Change Image Avata
     func changeImageAvata() {
         let didTabChangeAvata = UITapGestureRecognizer(target: self, action: #selector(didTabButtonChangeAvata))
         buttonChangeAvata.addGestureRecognizer(didTabChangeAvata)
@@ -88,6 +95,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = dataTitleSetting[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = OrderManager()
+            vc.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 1 {
+            let vc = VoucherController()
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

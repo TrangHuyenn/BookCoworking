@@ -28,9 +28,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="296" height="220"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toong Coworking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fl-ld-YU7">
-                                <rect key="frame" x="10" y="240" width="150" height="20"/>
+                                <rect key="frame" x="10" y="240" width="142" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="fSZ-Ys-xa5"/>
                                     <constraint firstAttribute="height" constant="20" id="qZB-7d-HrH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -95,6 +94,10 @@
             </constraints>
             <size key="customSize" width="336" height="350"/>
             <connections>
+                <outlet property="imgDes" destination="gSV-To-l86" id="2a0-Ix-0dw"/>
+                <outlet property="lbAddress" destination="tUf-h7-Sqv" id="7NB-OU-bUz"/>
+                <outlet property="lbNameCoworing" destination="3Fl-ld-YU7" id="ijo-88-DCy"/>
+                <outlet property="lbRate" destination="qv7-m8-9pl" id="zAB-ep-28i"/>
                 <outlet property="viewCard" destination="jFh-uA-Ueh" id="jSf-ue-9t1"/>
                 <outlet property="viewShadow" destination="CRM-py-s8m" id="c5s-hj-obz"/>
             </connections>

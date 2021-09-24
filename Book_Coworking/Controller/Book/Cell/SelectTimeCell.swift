@@ -9,10 +9,10 @@ import UIKit
 
 class SelectTimeCell: UITableViewCell {
 
+    @IBOutlet weak var timeStart: UIDatePicker!
+    @IBOutlet weak var timeEnd: UIDatePicker!
     
-    @IBOutlet weak var btnSetTime: UIButton!
     @IBOutlet weak var btnsetDate: UIButton!
-    @IBOutlet weak var tfSetTime: UITextField!
     @IBOutlet weak var tfSetDate: UITextField!
     
     var selectDate: ((Bool) -> Void)?
@@ -22,7 +22,6 @@ class SelectTimeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         tfSetDate.setIcon(UIImage(systemName: "chevron.down") ?? UIImage(), 20)
-//        tfSetTime.setIcon(UIImage(systemName: "chevron.down") ?? UIImage(), 20)
         formatter.dateFormat = "dd/MM/yyyy"
     }
     

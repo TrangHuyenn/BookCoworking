@@ -18,13 +18,21 @@ class HomeViewController: UIViewController {
     let imageSlideShows = ["slide1", "slide2", "slide3","slide4"]
     var scrollImageTimer: Timer!
     var count = 0
+    let coworkings:[Coworking] = coworkingsList
+    var pendingWorkItem: DispatchWorkItem?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         setUpViewHeader()
         config()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        navigationController?.isNavigationBarHidden = true
+        
     }
     
     func setUpViewHeader() {
@@ -33,6 +41,8 @@ class HomeViewController: UIViewController {
     
     func config() {
         setUpCollectionView()
+        let tabSearch = UITapGestureRecognizer(target: self, action: #selector(didTabSearchView))
+        searchView.searchTextField.addGestureRecognizer(tabSearch)
     }
     
     //MARK: Slide Show
@@ -74,7 +84,10 @@ class HomeViewController: UIViewController {
         }
     }
     
-    //MARK: Card
+    @objc func didTabSearchView() {
+        let vc = SearchBarController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 //MARK: Extension
@@ -88,6 +101,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as? CardCell
+            cell?.imgDes.image = UIImage(named: coworkings[indexPath.row].images[0])
+            cell?.lbNameCoworing.text = coworkings[indexPath.row].name
+            cell?.lbAddress.text = coworkings[indexPath.row].address
+            cell?.lbRate.text = "\(coworkings[indexPath.row].rate)"
             return cell!
         }
     }
@@ -97,13 +114,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return imageSlideShows.count
         }
         else {
-            return 10
+            return coworkings.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == cardCollection {
             let vc = DetailCoworkingViewController()
+            vc.index = indexPath.row
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -129,3 +147,5 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+

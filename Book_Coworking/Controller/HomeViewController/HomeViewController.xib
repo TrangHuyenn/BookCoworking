@@ -29,8 +29,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nme-Ly-k2X">
                             <rect key="frame" x="0.0" y="70" width="414" height="60"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-fs-nuq">
-                                    <rect key="frame" x="20" y="5" width="60" height="50.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_avata" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-fs-nuq">
+                                    <rect key="frame" x="20" y="0.0" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="GO1-fs-nuq" secondAttribute="height" id="k4g-Xb-8b1"/>
                                     </constraints>
@@ -102,10 +102,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrM-6N-YNF">
-                    <rect key="frame" x="0.0" y="427" width="414" height="425"/>
+                    <rect key="frame" x="0.0" y="412" width="414" height="425"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-PV-0GM">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="425"/>
+                            <rect key="frame" x="0.0" y="5" width="414" height="410"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bYL-h9-YAG">
                                 <size key="itemSize" width="128" height="128"/>
@@ -117,10 +117,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Coj-PV-0GM" secondAttribute="bottom" id="0ak-W2-GnZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Coj-PV-0GM" secondAttribute="bottom" constant="10" id="0ak-W2-GnZ"/>
                         <constraint firstAttribute="height" constant="425" id="7YV-PJ-y9q"/>
                         <constraint firstAttribute="trailing" secondItem="Coj-PV-0GM" secondAttribute="trailing" id="Dny-6Z-Bub"/>
-                        <constraint firstItem="Coj-PV-0GM" firstAttribute="top" secondItem="KrM-6N-YNF" secondAttribute="top" id="WEM-fe-FWQ"/>
+                        <constraint firstItem="Coj-PV-0GM" firstAttribute="top" secondItem="KrM-6N-YNF" secondAttribute="top" constant="5" id="WEM-fe-FWQ"/>
                         <constraint firstItem="Coj-PV-0GM" firstAttribute="leading" secondItem="KrM-6N-YNF" secondAttribute="leading" id="ppP-rJ-Ssv"/>
                     </constraints>
                 </view>
@@ -129,7 +129,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fYV-5z-tuF" firstAttribute="top" secondItem="qX3-kd-buk" secondAttribute="bottom" constant="2" id="2Kp-ED-NFC"/>
-                <constraint firstItem="KrM-6N-YNF" firstAttribute="top" secondItem="VBZ-EX-PTn" secondAttribute="bottom" constant="30" id="5C5-hc-rao"/>
+                <constraint firstItem="KrM-6N-YNF" firstAttribute="top" secondItem="VBZ-EX-PTn" secondAttribute="bottom" constant="15" id="5C5-hc-rao"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ouo-hD-fYF" secondAttribute="trailing" id="B3t-rC-2zu"/>
                 <constraint firstItem="VBZ-EX-PTn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Eu3-JN-eAt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYV-5z-tuF" secondAttribute="trailing" id="Ftn-Th-hnb"/>
@@ -148,7 +148,7 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="img_avata" width="660" height="988"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

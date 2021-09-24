@@ -9,6 +9,9 @@ import UIKit
 
 class EnterInforBookingCell: UITableViewCell {
 
+    @IBOutlet weak var txtPhone: UITextField!
+    @IBOutlet weak var txtNumber: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

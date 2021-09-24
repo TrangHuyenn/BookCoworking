@@ -10,6 +10,7 @@ import JTAppleCalendar
 
 class CalendarCell: JTACDayCell {
 
+    @IBOutlet weak var viewDay: UIView!
     @IBOutlet weak var lbDay: UILabel!
     
     override func awakeFromNib() {

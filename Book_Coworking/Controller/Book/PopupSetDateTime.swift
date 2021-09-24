@@ -10,6 +10,9 @@ import JTAppleCalendar
 
 class PopupSetDateTime: UIViewController {
     
+    @IBOutlet weak var btnSetDate: UIButton!
+    @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var viewMonth: UIView!
     
     @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var lbMonth: UILabel!
@@ -26,7 +29,8 @@ class PopupSetDateTime: UIViewController {
         calendarView.calendarDelegate = self
         calendarView.calendarDataSource = self
         configureCalendarView()
-        
+        btnCancel.layer.cornerRadius = 8
+        btnSetDate.layer.cornerRadius = 8
     }
     
     //MARK: - Regiter cell
@@ -35,6 +39,11 @@ class PopupSetDateTime: UIViewController {
                               forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                               withReuseIdentifier: "CalendarSectionHeaderView")
         calendarView.register(UINib(nibName: "CalendarCell", bundle: nil), forCellWithReuseIdentifier: "CalendarCell")
+        
+        self.calendarView.scrollToDate(self.dateSelect,animateScroll: false)
+        self.calendarView.selectDates([self.dateSelect])
+        
+        viewMonth.layer.cornerRadius = 8
     }
     
     @IBAction func btnCancel(_ sender: Any) {
@@ -49,22 +58,24 @@ class PopupSetDateTime: UIViewController {
     //MARK: - Config Cell
     func configureCell(cell: JTACDayCell?, date: Date, cellState: CellState) {
         guard let currentCell = cell as? CalendarCell else { return  }
-        
         currentCell.lbDay.text = cellState.text
         currentCell.lbDay.backgroundColor = .clear
+        currentCell.viewDay.backgroundColor = .clear
         configTextCollor(cell: cell, cellState: cellState)
-        
+        let cellHidden = cellState.dateBelongsTo != .thisMonth
+        currentCell.isHidden = cellHidden
     }
     
-    func configTextCollor(cell: JTACDayCell?    , cellState: CellState) {
+    func configTextCollor(cell: JTACDayCell?, cellState: CellState) {
         guard let currentCell = cell as? CalendarCell else { return  }
         
         if cellState.isSelected == true {
             currentCell.lbDay.textColor = .white
-            currentCell.lbDay.backgroundColor = .blue
+            currentCell.viewDay.backgroundColor = UIColor().mainColor()
+            currentCell.viewDay.layer.cornerRadius = currentCell.viewDay.frame.size.width/2
         }
         else {
-            if cellState.dateBelongsTo == .thisMonth && cellState.date >= Date() {
+            if cellState.date >= Date() {
                 currentCell.lbDay.textColor = .black
             }
             else {
@@ -75,7 +86,9 @@ class PopupSetDateTime: UIViewController {
     
 }
 
+//MARK: Extension
 extension PopupSetDateTime : JTACMonthViewDataSource {
+    
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let dateF = DateFormatter()
         formatter.dateFormat = "dd MM yy"
@@ -119,7 +132,7 @@ extension PopupSetDateTime: JTACMonthViewDelegate {
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         self.dateSelect = date
-        configureCell(cell: cell, date: date, cellState: cellState)
+//        configureCell(cell: cell, date: date, cellState: cellState)
     }
     
     func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
