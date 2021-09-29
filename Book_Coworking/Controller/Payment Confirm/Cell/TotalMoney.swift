@@ -9,6 +9,7 @@ import UIKit
 
 class TotalMoney: UITableViewCell {
 
+    @IBOutlet weak var lbTotalMoney: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -64,10 +64,10 @@ class OrderManager: UIViewController {
     }
     
     func setUpState() {
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let timeCurrentFormat = formatter.string(from: timeCurrent)
+        formatter.dateFormat = "dd/MM/yyyy"
+//        let timeCurrentFormat = formatter.string(from: timeCurrent)
         for item in orders! {
-            (item.dateOrder > timeCurrentFormat) ? (item.isEnd = false) : (item.isEnd = true)
+            (formatter.date(from: item.dateOrder)! > timeCurrent) ? (item.isEnd = false) : (item.isEnd = true)
             item.isEnd ? ordersComplete.append(item) : ordersOpen.append(item)
         }
     }
@@ -126,6 +126,5 @@ extension OrderManager: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
-    
-    
+
 }

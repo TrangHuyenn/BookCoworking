@@ -41,8 +41,6 @@ class PopupSetDateTime: UIViewController {
         calendarView.register(UINib(nibName: "CalendarCell", bundle: nil), forCellWithReuseIdentifier: "CalendarCell")
         
         self.calendarView.scrollToDate(self.dateSelect,animateScroll: false)
-        self.calendarView.selectDates([self.dateSelect])
-        
         viewMonth.layer.cornerRadius = 8
     }
     
@@ -71,15 +69,19 @@ class PopupSetDateTime: UIViewController {
         
         if cellState.isSelected == true {
             currentCell.lbDay.textColor = .white
+            currentCell.lbDay.backgroundColor = .clear
             currentCell.viewDay.backgroundColor = UIColor().mainColor()
+            currentCell.lbDay.backgroundColor = UIColor().mainColor()
             currentCell.viewDay.layer.cornerRadius = currentCell.viewDay.frame.size.width/2
         }
         else {
             if cellState.date >= Date() {
                 currentCell.lbDay.textColor = .black
+                currentCell.isUserInteractionEnabled = true
             }
             else {
                 currentCell.lbDay.textColor = .gray
+                currentCell.isUserInteractionEnabled = false
             }
         }
     }
@@ -132,7 +134,7 @@ extension PopupSetDateTime: JTACMonthViewDelegate {
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         self.dateSelect = date
-//        configureCell(cell: cell, date: date, cellState: cellState)
+        configureCell(cell: cell, date: date, cellState: cellState)
     }
     
     func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
@@ -140,7 +142,6 @@ extension PopupSetDateTime: JTACMonthViewDelegate {
     }
     
     func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
-        print("go to set up header")
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM YYYY"
         let date = range.start
@@ -158,6 +159,7 @@ extension PopupSetDateTime: JTACMonthViewDelegate {
     func calendarSizeForMonths(_ calendar: JTACMonthView?) -> MonthSize? {
         return MonthSize(defaultSize: 0.000001)
     }
+    
     
 }
 

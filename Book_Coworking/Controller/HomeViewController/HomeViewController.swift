@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorage
 
 class HomeViewController: UIViewController {
     
@@ -32,10 +35,10 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
         navigationController?.isNavigationBarHidden = true
-        
     }
     
     func setUpViewHeader() {
+        loadImageAvata()
         imageAvata.layer.cornerRadius = imageAvata.frame.height/2
     }
     
@@ -43,6 +46,49 @@ class HomeViewController: UIViewController {
         setUpCollectionView()
         let tabSearch = UITapGestureRecognizer(target: self, action: #selector(didTabSearchView))
         searchView.searchTextField.addGestureRecognizer(tabSearch)
+    }
+    
+    func loadImageAvata() {
+        let currentEmail = Auth.auth().currentUser?.email
+        
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        let collection = db.collection("User")
+        let document = collection.document(currentEmail!)
+        document.getDocument { snapshot, error in
+            guard let data = snapshot?.data() as? [String : String] else {
+                print("Data was empty")
+                return
+            }
+            let ref = data["profile_photo"]
+            
+            self.downloadUrlForProfilePicture(path: ref!) { url in
+                guard let url = url else {
+                    return
+                }
+                let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+                    guard let data_image = data else {
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.imageAvata.image = UIImage(data: data_image)
+                    }
+                }
+                task.resume()
+            }
+        }
+    }
+    
+    public func downloadUrlForProfilePicture(
+        path: String,
+        completion: @escaping (URL?) -> Void
+    ) {
+        Storage.storage().reference(withPath: path)
+            .downloadURL { url, _ in
+                completion(url)
+            }
     }
     
     //MARK: Slide Show

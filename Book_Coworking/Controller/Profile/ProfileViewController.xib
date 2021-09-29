@@ -26,8 +26,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YR0-gD-Hi3">
                     <rect key="frame" x="20" y="69" width="374" height="125"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_avata" translatesAutoresizingMaskIntoConstraints="NO" id="6Nf-Mg-fxb">
-                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6Nf-Mg-fxb">
+                            <rect key="frame" x="0.0" y="1.5" width="125" height="122.5"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="6Nf-Mg-fxb" secondAttribute="height" id="98U-V8-Orp"/>
                             </constraints>
@@ -39,21 +40,19 @@
                                 <constraint firstAttribute="width" constant="35" id="E3E-LJ-caY"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-iZ-KLj">
-                            <rect key="frame" x="145" y="40" width="200" height="25"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-iZ-KLj">
+                            <rect key="frame" x="145" y="40" width="41.5" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="27J-Vu-mxV"/>
-                                <constraint firstAttribute="width" constant="200" id="2qE-dZ-zmK"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="harry@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-yt-Uze">
-                            <rect key="frame" x="145" y="70" width="200" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-yt-Uze">
+                            <rect key="frame" x="145" y="70" width="41.5" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="GZS-0q-MPM"/>
-                                <constraint firstAttribute="width" constant="200" id="itB-cB-DQG"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -95,7 +94,7 @@
     </objects>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
-        <image name="img_avata" width="660" height="988"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

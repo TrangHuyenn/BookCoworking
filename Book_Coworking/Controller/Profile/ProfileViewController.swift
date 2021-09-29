@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class ProfileViewController: UIViewController {
     
@@ -34,7 +35,7 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
         navigationController?.isNavigationBarHidden = false
-    
+        
     }
     
     @objc func didTabSignOut() {
@@ -48,6 +49,9 @@ class ProfileViewController: UIViewController {
         labelEmail.text = currentEmail
         
         let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
         let collection = db.collection("User")
         let document = collection.document(currentEmail!)
         document.getDocument { snapshot, error in
@@ -56,19 +60,46 @@ class ProfileViewController: UIViewController {
                 print("Data was empty")
                 return
             }
-            self.labelName.text = name
+            let ref = data["profile_photo"]
+            
+            self.downloadUrlForProfilePicture(path: ref!) { url in
+                guard let url = url else {
+                    return
+                }
+                let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+                    guard let data_image = data else {
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.img_avata.image = UIImage(data: data_image)
+                    }
+                }
+                task.resume()
+            }
+            DispatchQueue.main.async {
+                self.labelName.text = name
+            }
         }
         
         changeImageAvata()
     }
     //MARK: - Change Image Avata
+    public func downloadUrlForProfilePicture(
+        path: String,
+        completion: @escaping (URL?) -> Void
+    ) {
+        Storage.storage().reference(withPath: path)
+            .downloadURL { url, _ in
+                completion(url)
+            }
+    }
+    
     func changeImageAvata() {
         let didTabChangeAvata = UITapGestureRecognizer(target: self, action: #selector(didTabButtonChangeAvata))
         buttonChangeAvata.addGestureRecognizer(didTabChangeAvata)
     }
     
     @objc func didTabButtonChangeAvata() {
-        print("Did tap Button")
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
@@ -80,6 +111,35 @@ class ProfileViewController: UIViewController {
     func setUpView() {
         img_avata.layer.cornerRadius = img_avata.frame.height/2
         img_avata.clipsToBounds = true
+    }
+    
+    func uploadUserProfilePicture(email: String, image: UIImage?, completion: @escaping (Bool) -> Void) {
+        guard let pngData = image?.pngData() else { return  }
+        Storage.storage().reference(withPath: "profile_pictures/\(email)/photo.png")
+            .putData(pngData, metadata: nil) { metadata, error in
+                guard metadata != nil, error == nil else {
+                    completion(false)
+                    return
+                }
+                completion(true)
+            }
+    }
+    
+    func updateProfilePhoto(email: String, completion: @escaping (Bool) -> Void){
+        print("Code go here")
+        let photoReference = "profile_pictures/\(email)/photo.png"
+        let db = Firestore.firestore()
+        let collection = db.collection("User")
+        let document = collection.document(email)
+        document.getDocument { snapshot, error in
+            guard var data = snapshot?.data(), error == nil else {
+                return
+            }
+            data["profile_photo"] = photoReference
+            document.setData(data) { error in
+                completion(error == nil)
+            }
+        }
     }
 }
 
@@ -122,7 +182,22 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let theImage = image {
             img_avata.image = theImage
         }
+        guard let currentEmail = Auth.auth().currentUser?.email else {
+            return
+        }
         
+        uploadUserProfilePicture(email: currentEmail, image: image) { success in
+            if success {
+                self.updateProfilePhoto(email: currentEmail) { updated in
+                    guard updated else {
+                        return
+                    }
+                    DispatchQueue.main.async { [self] in
+                        self.fetchData()
+                    }
+                }
+            }
+        }
         picker.dismiss(animated: true, completion: nil)
     }
 }

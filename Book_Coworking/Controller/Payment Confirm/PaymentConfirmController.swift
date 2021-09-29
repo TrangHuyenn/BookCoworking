@@ -16,7 +16,8 @@ class PaymentConfirmController: UIViewController {
     let titleInfor = ["Type", "Date", "Time", "Number", "Phone"]
     
     let listCell = ["InforCell", "ServiceCell", "PolicyCell", "TotalMoney","PromotionCell","PaymentMethodCell"]
-    var number = 1
+//    var number = 1
+    var numberHourBook = 1
     var promotionCode = ""
 
     override func viewDidLoad() {
@@ -34,7 +35,6 @@ class PaymentConfirmController: UIViewController {
         for item in listCell {
             tableViewInfor.register(UINib(nibName: item, bundle: nil), forCellReuseIdentifier: item)
         }
-        
     }
     
     func setUpLayout(){
@@ -110,6 +110,7 @@ extension PaymentConfirmController: UITableViewDataSource, UITableViewDelegate {
         }
         else if indexPath.row == 7 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TotalMoney", for: indexPath) as? TotalMoney
+            cell?.lbTotalMoney.text = "VND \(numberHourBook*50).000"
             return cell!
         }
         else if indexPath.row == 8 {

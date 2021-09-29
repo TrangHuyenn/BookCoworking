@@ -16,6 +16,7 @@
 		0C46636726FCE13000E2F50A /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46636526FCE13000E2F50A /* PromotionCell.swift */; };
 		0C46636826FCE13000E2F50A /* PromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46636626FCE13000E2F50A /* PromotionCell.xib */; };
 		0C550AD926F49F51002F21DE /* EntityPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C550AD826F49F51002F21DE /* EntityPopup.swift */; };
+		0C558D4027042D23005DF4ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C558D3F27042D23005DF4ED /* User.swift */; };
 		0C89004126F9DF400073821B /* TotalMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89003F26F9DF400073821B /* TotalMoney.swift */; };
 		0C89004226F9DF400073821B /* TotalMoney.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C89004026F9DF400073821B /* TotalMoney.xib */; };
 		0C89004526F9E0440073821B /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89004326F9E0440073821B /* PaymentMethodCell.swift */; };
@@ -94,6 +95,7 @@
 		0C46636526FCE13000E2F50A /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
 		0C46636626FCE13000E2F50A /* PromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCell.xib; sourceTree = "<group>"; };
 		0C550AD826F49F51002F21DE /* EntityPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityPopup.swift; sourceTree = "<group>"; };
+		0C558D3F27042D23005DF4ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C89003F26F9DF400073821B /* TotalMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMoney.swift; sourceTree = "<group>"; };
 		0C89004026F9DF400073821B /* TotalMoney.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalMoney.xib; sourceTree = "<group>"; };
 		0C89004326F9E0440073821B /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
@@ -355,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE4EFE026E916A40035FB39 /* Extension */,
-				0CEB35C726E27405003B5114 /* Service */,
+				0CEB35C726E27405003B5114 /* Manager */,
 				0CEB35C826E2741A003B5114 /* Model */,
 				0CEB35CB26E2743B003B5114 /* Controller */,
 				0CEB35B326E273AC003B5114 /* AppDelegate.swift */,
@@ -368,11 +370,11 @@
 			path = Book_Coworking;
 			sourceTree = "<group>";
 		};
-		0CEB35C726E27405003B5114 /* Service */ = {
+		0CEB35C726E27405003B5114 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Service;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		0CEB35C826E2741A003B5114 /* Model */ = {
@@ -381,6 +383,7 @@
 				0CC479BA26E51E49000B8848 /* Coworking.swift */,
 				0CC479BC26E524E4000B8848 /* Data.swift */,
 				0CC9736326F8D5E3006FF8E2 /* Order.swift */,
+				0C558D3F27042D23005DF4ED /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				0C31FDA526EFB04A00C51447 /* CardCell.swift in Sources */,
 				0CC9735C26F8930A006FF8E2 /* PaymentConfirmController.swift in Sources */,
 				0CE4EFE226E916D40035FB39 /* UICollor.swift in Sources */,
+				0C558D4027042D23005DF4ED /* User.swift in Sources */,
 				0CAF0C7026F3969100BCC766 /* SelectTimeCell.swift in Sources */,
 				0C89005326FA3E160073821B /* OrderCell.swift in Sources */,
 				0CC3570226E3DECE00133290 /* ListCell.swift in Sources */,

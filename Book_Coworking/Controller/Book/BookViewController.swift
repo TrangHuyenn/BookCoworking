@@ -59,11 +59,19 @@ class BookViewController: UIViewController {
         guard let numberString = cellInfor?.txtNumber.text, let phoneString = cellInfor?.txtPhone.text, let dateOrder = cellTime?.tfSetDate.text, let timeStart = cellTime?.timeStart.date, let timeEnd = cellTime?.timeEnd.date , let type = cellType?.textFieldType.text, let address = cellAddress?.lbAddress.text else { return  }
         guard let number = Int(numberString), let phone = Int(phoneString) else { return  }
 
-        
         formater.dateFormat = "h:mm a"
         formatterCurrent.dateFormat = "yyyy/MM/dd HH:mm"
         orderBook = Order(UUID().uuidString,coworkingsList[index].name,type,formatterCurrent.string(from: currentDate), dateOrder, formater.string(from: timeStart) , formater.string(from: timeEnd) , number, phone, "", address, false)
-        navigationController?.pushViewController(vc, animated: true)
+
+        if timeStart > timeEnd {
+            print("Du lieu dat khong dung")
+            cellTime?.lbError.text = "Please check time again"
+        }
+        else {
+            let numberHourTimeBook = Int(round((timeEnd.timeIntervalSince1970 - timeStart.timeIntervalSince1970)/3600))
+            vc.numberHourBook = numberHourTimeBook
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
@@ -104,10 +112,10 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource{
             return 80
         }
         else if indexPath.row == 1 {
-            return 85
+            return 97
         }
         else if indexPath.row == 2 {
-            return 160
+            return 150
         }
         else {
             return 40
@@ -116,7 +124,6 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource{
     
     @objc func onSelectDate(_ isStart: Bool) {
         let vc = PopupSetDateTime()
-//        vc.modalPresentationStyle = .fullScreen
         vc.onSelectDate = { date in
             self.dateBook = date
             self.tableView.reloadData()

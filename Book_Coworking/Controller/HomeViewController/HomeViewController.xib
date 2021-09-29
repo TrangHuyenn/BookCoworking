@@ -29,8 +29,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nme-Ly-k2X">
                             <rect key="frame" x="0.0" y="70" width="414" height="60"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_avata" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-fs-nuq">
-                                    <rect key="frame" x="20" y="0.0" width="60" height="60"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-fs-nuq">
+                                    <rect key="frame" x="20" y="1.5" width="60" height="57.5"/>
+                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="GO1-fs-nuq" secondAttribute="height" id="k4g-Xb-8b1"/>
                                     </constraints>
@@ -148,7 +149,7 @@
         </view>
     </objects>
     <resources>
-        <image name="img_avata" width="660" height="988"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

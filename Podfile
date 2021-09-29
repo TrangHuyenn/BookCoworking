@@ -7,8 +7,11 @@ target 'Book_Coworking' do
 
   # Pods for Book_Coworking
 pod 'Firebase'
+pod 'FirebaseCore'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
+pod 'FirebaseInstanceID', '2.0.0'
 pod 'ProgressHUD'
 pod 'DropDown'
 pod 'JTAppleCalendar'
