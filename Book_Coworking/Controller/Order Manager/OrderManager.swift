@@ -21,8 +21,9 @@ class OrderManager: UIViewController {
     var ordersOpen: [Order] = []
     var ordersComplete: [Order] = []
     var isShowOpen: Bool = true
-
+    
     var arrayOrder: [Any] = []
+    var indexReview = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,21 +44,18 @@ class OrderManager: UIViewController {
     func configTableView() {
         tableOrder.delegate = self
         tableOrder.dataSource = self
+        tableOrder.tableFooterView = UIView()
         tableOrder.register(UINib(nibName: "OrderCell", bundle: nil), forCellReuseIdentifier: "OrderCell")
         fethchData()
     }
     
     func fethchData(){
         // load data form firebase
-        guard let user = Auth.auth().currentUser else { return  }
-        
-        let db = Firestore.firestore()
-        let userCollection = db.collection("User")
-        let userDocument = userCollection.document(user.email!)
-        let orderCollection = userDocument.collection("Order")
+        let orderCollection = createDocument().collection("Order")
         
         orderCollection.addSnapshotListener { querySnapshot, error in
             self.orders = querySnapshot?.documents.map({Order.init(snapShot: $0)})
+
             self.setUpState()
             self.tableOrder.reloadData()
         }
@@ -117,14 +115,23 @@ extension OrderManager: UITableViewDelegate, UITableViewDataSource {
             cell.lbDateOrder.text = order.dateOrder
             cell.lbDateSetBooking.text = order.dateBookOrder
             cell.lbDetailTimeBooking.text = "\(order.timeOrderStart) - \(order.timeOrderEnd)"
+            indexReview = indexPath.row
             cell.viewState.isHidden = false
             cell.btnReview.isHidden = false
+            cell.btnReview.addTarget(self, action: #selector(didTabReview), for: .touchUpInside)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    
+    @objc func didTabReview() {
+        let vc = Reviewcontroller()
+        let cell = tableOrder.cellForRow(at: IndexPath(row: indexReview, section: 0)) as! OrderCell
+        vc.nameCoworking = cell.lbName.text!
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

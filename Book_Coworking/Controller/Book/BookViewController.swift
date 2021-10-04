@@ -24,7 +24,7 @@ class BookViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Booking"
-        
+        navigationController?.navigationBar.tintColor = UIColor().mainColor()
         view.addSubview(button)
         initTableView()
         setUpLayout()

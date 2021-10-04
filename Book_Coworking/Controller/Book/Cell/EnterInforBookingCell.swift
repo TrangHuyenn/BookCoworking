@@ -15,6 +15,8 @@ class EnterInforBookingCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        txtPhone.keyboardType = .numberPad
+        txtNumber.keyboardType = .numberPad
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

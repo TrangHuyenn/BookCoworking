@@ -16,6 +16,8 @@ extension UITextField {
         input.layer.cornerRadius = 8
         input.layer.borderWidth = 0.5
         input.layer.borderColor = #colorLiteral(red: 0.8745098039, green: 0.6156862745, blue: 0.3803921569, alpha: 1)
+        input.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        input.leftViewMode = .always
         return input
     }
     
@@ -36,5 +38,7 @@ extension UITextField {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
         self.rightView = paddingView
     }
+    
+    
 
 }

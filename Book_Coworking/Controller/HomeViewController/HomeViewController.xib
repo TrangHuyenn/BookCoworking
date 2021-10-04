@@ -24,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-hD-fYF">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nme-Ly-k2X">
-                            <rect key="frame" x="0.0" y="70" width="414" height="60"/>
+                            <rect key="frame" x="0.0" y="65" width="414" height="60"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-fs-nuq">
                                     <rect key="frame" x="20" y="1.5" width="60" height="57.5"/>
@@ -56,7 +56,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="130" id="JwR-QB-otG"/>
+                        <constraint firstAttribute="height" constant="125" id="JwR-QB-otG"/>
                         <constraint firstAttribute="trailing" secondItem="nme-Ly-k2X" secondAttribute="trailing" id="M7a-Sb-j18"/>
                         <constraint firstAttribute="bottom" secondItem="nme-Ly-k2X" secondAttribute="bottom" id="Yfx-PW-jKK"/>
                         <constraint firstItem="nme-Ly-k2X" firstAttribute="leading" secondItem="Ouo-hD-fYF" secondAttribute="leading" id="qTe-BA-uOX"/>
@@ -65,7 +65,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX3-kd-buk">
                     <rect key="frame" x="0.0" y="135" width="414" height="180"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n42-Mp-kFr">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n42-Mp-kFr">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ixr-aa-s4f">
@@ -94,7 +94,7 @@
                     <color key="currentPageIndicatorTintColor" red="0.81176470590000005" green="0.31372549020000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </pageControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBZ-EX-PTn">
-                    <rect key="frame" x="20" y="367" width="374" height="30"/>
+                    <rect key="frame" x="20" y="357" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="vFb-a3-3o2"/>
                     </constraints>
@@ -103,10 +103,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrM-6N-YNF">
-                    <rect key="frame" x="0.0" y="412" width="414" height="425"/>
+                    <rect key="frame" x="0.0" y="402" width="414" height="460"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-PV-0GM">
-                            <rect key="frame" x="0.0" y="5" width="414" height="410"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-PV-0GM">
+                            <rect key="frame" x="0.0" y="5" width="414" height="445"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bYL-h9-YAG">
                                 <size key="itemSize" width="128" height="128"/>
@@ -119,7 +119,6 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Coj-PV-0GM" secondAttribute="bottom" constant="10" id="0ak-W2-GnZ"/>
-                        <constraint firstAttribute="height" constant="425" id="7YV-PJ-y9q"/>
                         <constraint firstAttribute="trailing" secondItem="Coj-PV-0GM" secondAttribute="trailing" id="Dny-6Z-Bub"/>
                         <constraint firstItem="Coj-PV-0GM" firstAttribute="top" secondItem="KrM-6N-YNF" secondAttribute="top" constant="5" id="WEM-fe-FWQ"/>
                         <constraint firstItem="Coj-PV-0GM" firstAttribute="leading" secondItem="KrM-6N-YNF" secondAttribute="leading" id="ppP-rJ-Ssv"/>
@@ -132,6 +131,7 @@
                 <constraint firstItem="fYV-5z-tuF" firstAttribute="top" secondItem="qX3-kd-buk" secondAttribute="bottom" constant="2" id="2Kp-ED-NFC"/>
                 <constraint firstItem="KrM-6N-YNF" firstAttribute="top" secondItem="VBZ-EX-PTn" secondAttribute="bottom" constant="15" id="5C5-hc-rao"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ouo-hD-fYF" secondAttribute="trailing" id="B3t-rC-2zu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KrM-6N-YNF" secondAttribute="bottom" id="BL9-ep-9CP"/>
                 <constraint firstItem="VBZ-EX-PTn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Eu3-JN-eAt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYV-5z-tuF" secondAttribute="trailing" id="Ftn-Th-hnb"/>
                 <constraint firstItem="qX3-kd-buk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nk7-sY-Ve5"/>
@@ -141,9 +141,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KrM-6N-YNF" secondAttribute="trailing" id="T1M-fs-AZz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qX3-kd-buk" secondAttribute="trailing" id="UEv-cd-ug8"/>
                 <constraint firstItem="KrM-6N-YNF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gCm-ZJ-S6N"/>
-                <constraint firstItem="VBZ-EX-PTn" firstAttribute="top" secondItem="fYV-5z-tuF" secondAttribute="bottom" constant="20" id="mQb-KB-dla"/>
+                <constraint firstItem="VBZ-EX-PTn" firstAttribute="top" secondItem="fYV-5z-tuF" secondAttribute="bottom" constant="10" id="mQb-KB-dla"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VBZ-EX-PTn" secondAttribute="trailing" constant="20" id="n2Q-yO-b19"/>
-                <constraint firstItem="qX3-kd-buk" firstAttribute="top" secondItem="Ouo-hD-fYF" secondAttribute="bottom" constant="5" id="tVf-fA-Rz6"/>
+                <constraint firstItem="qX3-kd-buk" firstAttribute="top" secondItem="Ouo-hD-fYF" secondAttribute="bottom" constant="10" id="tVf-fA-Rz6"/>
             </constraints>
             <point key="canvasLocation" x="102.89855072463769" y="93.75"/>
         </view>

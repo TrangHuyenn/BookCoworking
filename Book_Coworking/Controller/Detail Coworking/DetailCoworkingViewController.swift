@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import Cosmos
+import MapKit
 
 class DetailCoworkingViewController: UIViewController {
     
+    @IBOutlet weak var tabelReview: UITableView!
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var lbPrice: UILabel!
@@ -23,10 +27,12 @@ class DetailCoworkingViewController: UIViewController {
         configColletionView()
         view.addSubview(button)
         tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.tintColor = UIColor().mainColor()
         setupLayout()
         configData()
         button.addTarget(self, action: #selector(didTapButtonBook), for: .touchUpInside)
         navigationController?.isNavigationBarHidden = false
+        configTableReview()
     }
     
     func configColletionView() {
@@ -35,14 +41,38 @@ class DetailCoworkingViewController: UIViewController {
         imageColletionDetail.register(UINib(nibName: "ImageCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionCell")
     }
     
+    func configTableReview() {
+        tabelReview.delegate = self
+        tabelReview.dataSource = self
+        tabelReview.register(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "ReviewCell")
+        tabelReview.tableFooterView = UIView()
+    }
+    
     func configData() {
         lbAddress.text = coworkingsList[index].address
         lbDescription.text = coworkingsList[index].description
         lbDescription.numberOfLines = 0
         lbPrice.text = "\(coworkingsList[index].price)đ /Hour"
         lbPrice.textColor = UIColor().mainColor()
+    
+        loadReview()
     }
     
+    func loadReview() {
+        let db = Firestore.firestore()
+        let reviewCollection = db.collection("Review")
+            
+        reviewCollection.whereField("Coworking", isEqualTo: coworkingsList[self.index].name)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    reviews = querySnapshot?.documents.map({Review.init(snapShot: $0)})
+                    self.tabelReview.reloadData()
+                }
+        }
+    }
+        
     func setupLayout(){
         button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -53,6 +83,11 @@ class DetailCoworkingViewController: UIViewController {
     @objc func didTapButtonBook(){
         let vc = BookViewController()
         vc.index = index
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func tabViewAll(_ sender: Any) {
+        let vc = ShowAllReviewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -73,6 +108,25 @@ extension DetailCoworkingViewController: UICollectionViewDelegate, UICollectionV
 extension DetailCoworkingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: imageColletionDetail.frame.size.width*0.6, height: imageColletionDetail.frame.size.height)
+    }
+    
+}
+
+extension DetailCoworkingViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reviews?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tabelReview.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
+        cell.cosmosView.rating = reviews?[indexPath.row].rating ?? 3.0
+        cell.lbContent.text = reviews?[indexPath.row].content
+        cell.lbName.text = reviews?[indexPath.row].username
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     

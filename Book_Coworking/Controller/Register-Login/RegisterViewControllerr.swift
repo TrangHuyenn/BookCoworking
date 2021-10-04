@@ -170,6 +170,7 @@ class RegisterViewControllerr: UIViewController {
         
         inputPassword.isSecureTextEntry = true
         self.inputPassword.delegate = self
+        self.inputEmail.delegate = self
 
         labelError.isHidden = true
         
@@ -212,6 +213,10 @@ class RegisterViewControllerr: UIViewController {
         viewSignUpContent.addSubview(buttonSignUp)
         
         self.inputComfirmPassword.delegate = self
+        self.inputUserName.delegate = self
+        self.inputEmail.delegate = self
+        self.inputPassword.delegate = self
+
         inputPassword.isSecureTextEntry = true
         inputComfirmPassword.isSecureTextEntry = true
         labelError.isHidden = true
@@ -263,7 +268,6 @@ class RegisterViewControllerr: UIViewController {
         viewSignInContent.isHidden = false
         setUpSignInLayout()
         isSignInView = true
-
     }
     
     @objc func didTabChooseSignUp() {
@@ -313,7 +317,6 @@ class RegisterViewControllerr: UIViewController {
                     let vc = TabBarViewController()
                     self.navigationController?.pushViewController(vc, animated: true)
                     
-                    
                 }
             }
         }
@@ -321,8 +324,7 @@ class RegisterViewControllerr: UIViewController {
     
     @objc func didTabForgotPassword() {
         Auth.auth().sendPasswordReset(withEmail: inputEmail.text!) { error in
-            print(error)
-            
+            print(error ?? "Error here")
         }
         
         let alert = UIAlertController(title: "Alert", message: "Please check your email", preferredStyle: .alert)
@@ -401,11 +403,9 @@ class RegisterViewControllerr: UIViewController {
 //        print("Key board will show: \(notification.name.rawValue)")
         if !isSignInView {
             view.frame.origin.y = -170
-            print(isSignInView)
         }
         else {
             view.frame.origin.y = 0
-            print(isSignInView)
 
         }
     }

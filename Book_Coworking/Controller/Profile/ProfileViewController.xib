@@ -35,6 +35,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tUn-mW-koK">
                             <rect key="frame" x="90" y="90.5" width="35" height="33"/>
+                            <color key="tintColor" red="0.87450980389999999" green="0.56470588239999997" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="4Nz-Im-liJ"/>
                                 <constraint firstAttribute="width" constant="35" id="E3E-LJ-caY"/>

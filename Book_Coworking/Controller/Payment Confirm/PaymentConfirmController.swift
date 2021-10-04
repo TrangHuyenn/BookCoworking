@@ -54,13 +54,8 @@ class PaymentConfirmController: UIViewController {
     //MARK: - save order to firebase
     
     func saveOrder(newOrder: Order) {
-        
-        guard let user = Auth.auth().currentUser else { return  }
-        
-        let db = Firestore.firestore()
-        let userCollection = db.collection("User")
-        let userDocument = userCollection.document(user.email!)
-        let orderCollection = userDocument.collection("Order")
+    
+        let orderCollection = createDocument().collection("Order")
         let orderDocument = orderCollection.document(newOrder.id)
         orderDocument.setData(["Id" : newOrder.id,"Name" : newOrder.name, "Type" : newOrder.type, "Date booking order" : newOrder.dateBookOrder, "Date order" : newOrder.dateOrder, "Time start" : newOrder.timeOrderStart, "Time end": newOrder.timeOrderEnd, "Number": newOrder.number, "Phone": newOrder.phone, "Promotion": newOrder.promo, "Address": newOrder.address, "Is End" : newOrder.isEnd])
     }

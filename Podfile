@@ -15,4 +15,6 @@ pod 'FirebaseInstanceID', '2.0.0'
 pod 'ProgressHUD'
 pod 'DropDown'
 pod 'JTAppleCalendar'
+pod 'Cosmos', '~> 23.0'
+pod 'TinyConstraints'
 end

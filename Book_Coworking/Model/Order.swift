@@ -35,6 +35,7 @@ class Order {
         self.promo = promo
         self.address = address
         self.isEnd = isEnd
+    
     }
     
     init(snapShot: QueryDocumentSnapshot) {
@@ -72,6 +73,10 @@ class Order {
         if let isEnd = snapShot.data()["IsEnd"] as? Bool {
             self.isEnd = isEnd
         }
+        if let isEnd = snapShot.data()["IsEnd"] as? Bool {
+            self.isEnd = isEnd
+        }
+      
     }
 
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 
@@ -49,22 +48,15 @@ class HomeViewController: UIViewController {
     }
     
     func loadImageAvata() {
-        let currentEmail = Auth.auth().currentUser?.email
-        
-        let db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-        let collection = db.collection("User")
-        let document = collection.document(currentEmail!)
-        document.getDocument { snapshot, error in
+
+        createDocument().getDocument { snapshot, error in
             guard let data = snapshot?.data() as? [String : String] else {
                 print("Data was empty")
                 return
             }
             let ref = data["profile_photo"]
             
-            self.downloadUrlForProfilePicture(path: ref!) { url in
+            self.downloadUrlForProfilePicture(path: ref ?? "") { url in
                 guard let url = url else {
                     return
                 }

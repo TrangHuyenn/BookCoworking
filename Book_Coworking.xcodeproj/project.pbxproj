@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0D9E42270B482C00626828 /* ShowAllReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D9E40270B482C00626828 /* ShowAllReviewController.swift */; };
+		0C0D9E43270B482C00626828 /* ShowAllReviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0D9E41270B482C00626828 /* ShowAllReviewController.xib */; };
 		0C31FDA526EFB04A00C51447 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C31FDA326EFB04A00C51447 /* CardCell.swift */; };
 		0C31FDA626EFB04B00C51447 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C31FDA426EFB04A00C51447 /* CardCell.xib */; };
 		0C46635E26FC97AD00E2F50A /* VoucherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46635C26FC97AD00E2F50A /* VoucherController.swift */; };
@@ -15,6 +17,9 @@
 		0C46636426FC987B00E2F50A /* VoucherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46636226FC987B00E2F50A /* VoucherCell.xib */; };
 		0C46636726FCE13000E2F50A /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C46636526FCE13000E2F50A /* PromotionCell.swift */; };
 		0C46636826FCE13000E2F50A /* PromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C46636626FCE13000E2F50A /* PromotionCell.xib */; };
+		0C4965D72705B76C00DD712F /* Reviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4965D52705B76C00DD712F /* Reviewcontroller.swift */; };
+		0C4965D82705B76C00DD712F /* Reviewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4965D62705B76C00DD712F /* Reviewcontroller.xib */; };
+		0C4965DC27060E1400DD712F /* CreateDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4965DB27060E1400DD712F /* CreateDocument.swift */; };
 		0C550AD926F49F51002F21DE /* EntityPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C550AD826F49F51002F21DE /* EntityPopup.swift */; };
 		0C558D4027042D23005DF4ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C558D3F27042D23005DF4ED /* User.swift */; };
 		0C89004126F9DF400073821B /* TotalMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89003F26F9DF400073821B /* TotalMoney.swift */; };
@@ -82,10 +87,15 @@
 		0CEB35ED26E28246003B5114 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB35EB26E28246003B5114 /* ProfileViewController.swift */; };
 		0CEB35EE26E28246003B5114 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB35EC26E28246003B5114 /* ProfileViewController.xib */; };
 		0CEB35F226E28325003B5114 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB35F126E28324003B5114 /* GoogleService-Info.plist */; };
+		0CFA329F27070C2300E3E29D /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA329D27070C2300E3E29D /* ReviewCell.swift */; };
+		0CFA32A027070C2300E3E29D /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFA329E27070C2300E3E29D /* ReviewCell.xib */; };
+		0CFA32A22707661900E3E29D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA32A12707661900E3E29D /* Review.swift */; };
 		3C38DD923B8201BFE3875E7C /* Pods_Book_Coworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690BAF190BE8C2CBBB64289F /* Pods_Book_Coworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0D9E40270B482C00626828 /* ShowAllReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllReviewController.swift; sourceTree = "<group>"; };
+		0C0D9E41270B482C00626828 /* ShowAllReviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowAllReviewController.xib; sourceTree = "<group>"; };
 		0C31FDA326EFB04A00C51447 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		0C31FDA426EFB04A00C51447 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		0C46635C26FC97AD00E2F50A /* VoucherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherController.swift; sourceTree = "<group>"; };
@@ -94,6 +104,9 @@
 		0C46636226FC987B00E2F50A /* VoucherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoucherCell.xib; sourceTree = "<group>"; };
 		0C46636526FCE13000E2F50A /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
 		0C46636626FCE13000E2F50A /* PromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCell.xib; sourceTree = "<group>"; };
+		0C4965D52705B76C00DD712F /* Reviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewcontroller.swift; sourceTree = "<group>"; };
+		0C4965D62705B76C00DD712F /* Reviewcontroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Reviewcontroller.xib; sourceTree = "<group>"; };
+		0C4965DB27060E1400DD712F /* CreateDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDocument.swift; sourceTree = "<group>"; };
 		0C550AD826F49F51002F21DE /* EntityPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityPopup.swift; sourceTree = "<group>"; };
 		0C558D3F27042D23005DF4ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C89003F26F9DF400073821B /* TotalMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMoney.swift; sourceTree = "<group>"; };
@@ -163,6 +176,9 @@
 		0CEB35EB26E28246003B5114 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0CEB35EC26E28246003B5114 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		0CEB35F126E28324003B5114 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0CFA329D27070C2300E3E29D /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		0CFA329E27070C2300E3E29D /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
+		0CFA32A12707661900E3E29D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		690BAF190BE8C2CBBB64289F /* Pods_Book_Coworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Coworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		748C209FC428D742CFCE2838 /* Pods-Book_Coworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book_Coworking.debug.xcconfig"; path = "Target Support Files/Pods-Book_Coworking/Pods-Book_Coworking.debug.xcconfig"; sourceTree = "<group>"; };
 		C3D7E46556F655C689BAEA38 /* Pods-Book_Coworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book_Coworking.release.xcconfig"; path = "Target Support Files/Pods-Book_Coworking/Pods-Book_Coworking.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +213,15 @@
 				0C46636226FC987B00E2F50A /* VoucherCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0C4965D42705B73200DD712F /* ReviewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C4965D52705B76C00DD712F /* Reviewcontroller.swift */,
+				0C4965D62705B76C00DD712F /* Reviewcontroller.xib */,
+			);
+			path = ReviewController;
 			sourceTree = "<group>";
 		};
 		0C89004726FA2EC30073821B /* Payment Success */ = {
@@ -267,10 +292,13 @@
 		0CC479BE26E52A5A000B8848 /* Detail Coworking */ = {
 			isa = PBXGroup;
 			children = (
+				0CFA329C27070BA000E3E29D /* Cell */,
 				0CA63C8126F1021F00C94C8D /* DetailCoworkingViewController.swift */,
 				0CA63C8226F1021F00C94C8D /* DetailCoworkingViewController.xib */,
 				0CD73B0A26F244550096E5CA /* ImageCollectionCell.swift */,
 				0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */,
+				0C0D9E40270B482C00626828 /* ShowAllReviewController.swift */,
+				0C0D9E41270B482C00626828 /* ShowAllReviewController.xib */,
 			);
 			path = "Detail Coworking";
 			sourceTree = "<group>";
@@ -357,7 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE4EFE026E916A40035FB39 /* Extension */,
-				0CEB35C726E27405003B5114 /* Manager */,
+				0CEB35C726E27405003B5114 /* Serivce */,
 				0CEB35C826E2741A003B5114 /* Model */,
 				0CEB35CB26E2743B003B5114 /* Controller */,
 				0CEB35B326E273AC003B5114 /* AppDelegate.swift */,
@@ -370,11 +398,12 @@
 			path = Book_Coworking;
 			sourceTree = "<group>";
 		};
-		0CEB35C726E27405003B5114 /* Manager */ = {
+		0CEB35C726E27405003B5114 /* Serivce */ = {
 			isa = PBXGroup;
 			children = (
+				0C4965DB27060E1400DD712F /* CreateDocument.swift */,
 			);
-			path = Manager;
+			path = Serivce;
 			sourceTree = "<group>";
 		};
 		0CEB35C826E2741A003B5114 /* Model */ = {
@@ -384,6 +413,7 @@
 				0CC479BC26E524E4000B8848 /* Data.swift */,
 				0CC9736326F8D5E3006FF8E2 /* Order.swift */,
 				0C558D3F27042D23005DF4ED /* User.swift */,
+				0CFA32A12707661900E3E29D /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +421,7 @@
 		0CEB35CB26E2743B003B5114 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C4965D42705B73200DD712F /* ReviewController */,
 				0C46635B26FC979400E2F50A /* Voucher */,
 				0CD61F3526FAF40C00D784C5 /* SearchBar */,
 				0C89004C26FA32C10073821B /* Order Manager */,
@@ -455,6 +486,15 @@
 				0CEB35EC26E28246003B5114 /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		0CFA329C27070BA000E3E29D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0CFA329D27070C2300E3E29D /* ReviewCell.swift */,
+				0CFA329E27070C2300E3E29D /* ReviewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		84A88B3766B578FB95DBEC96 /* Pods */ = {
@@ -541,13 +581,16 @@
 				0CC9736226F89937006FF8E2 /* InforCell.xib in Resources */,
 				0CD73B0D26F244550096E5CA /* ImageCollectionCell.xib in Resources */,
 				0CEB35E726E276E1003B5114 /* BookViewController.xib in Resources */,
+				0C0D9E43270B482C00626828 /* ShowAllReviewController.xib in Resources */,
 				0CAF0C6D26F38B0100BCC766 /* AddressCell.xib in Resources */,
 				0CC9735D26F8930A006FF8E2 /* PaymentConfirmController.xib in Resources */,
 				0CAF0C6526F38A8C00BCC766 /* CalendarBookingCell.xib in Resources */,
 				0CC9736826F8EFDE006FF8E2 /* ServiceCell.xib in Resources */,
 				0CEB35C026E273AD003B5114 /* LaunchScreen.storyboard in Resources */,
+				0C4965D82705B76C00DD712F /* Reviewcontroller.xib in Resources */,
 				0CE0748626F64DA400227029 /* CalendarSectionHeaderView.xib in Resources */,
 				0CE0748226F5F88400227029 /* PopupSetDateTime.xib in Resources */,
+				0CFA32A027070C2300E3E29D /* ReviewCell.xib in Resources */,
 				0C89005426FA3E160073821B /* OrderCell.xib in Resources */,
 				0C926A5D26ED05B800FE4ABA /* SlideCell.xib in Resources */,
 				0C89004226F9DF400073821B /* TotalMoney.xib in Resources */,
@@ -622,8 +665,10 @@
 				0CE0748526F64DA400227029 /* CalendarSectionHeaderView.swift in Sources */,
 				0CAF0C6C26F38B0100BCC766 /* AddressCell.swift in Sources */,
 				0CEB35E126E276B1003B5114 /* ListCoworkingViewController.swift in Sources */,
+				0C4965D72705B76C00DD712F /* Reviewcontroller.swift in Sources */,
 				0CC9736726F8EFDE006FF8E2 /* ServiceCell.swift in Sources */,
 				0CE0748126F5F88400227029 /* PopupSetDateTime.swift in Sources */,
+				0CFA32A22707661900E3E29D /* Review.swift in Sources */,
 				0CE4EFDF26E904FD0035FB39 /* RegisterViewControllerr.swift in Sources */,
 				0CAF0C6826F38AE600BCC766 /* EnterInforBookingCell.swift in Sources */,
 				0CE0747C26F5DDEF00227029 /* CalendarCell.swift in Sources */,
@@ -631,6 +676,7 @@
 				0C89004526F9E0440073821B /* PaymentMethodCell.swift in Sources */,
 				0CE26CEB26EAFF43005EBD94 /* UIButton.swift in Sources */,
 				0C550AD926F49F51002F21DE /* EntityPopup.swift in Sources */,
+				0C4965DC27060E1400DD712F /* CreateDocument.swift in Sources */,
 				0CEB35B426E273AC003B5114 /* AppDelegate.swift in Sources */,
 				0CEB35B626E273AC003B5114 /* SceneDelegate.swift in Sources */,
 				0CC9736426F8D5E3006FF8E2 /* Order.swift in Sources */,
@@ -646,7 +692,9 @@
 				0C46635E26FC97AD00E2F50A /* VoucherController.swift in Sources */,
 				0CAF0C6026F38A6600BCC766 /* RoomTypeCell.swift in Sources */,
 				0CAF0C6426F38A8C00BCC766 /* CalendarBookingCell.swift in Sources */,
+				0C0D9E42270B482C00626828 /* ShowAllReviewController.swift in Sources */,
 				0C89004F26FA32E80073821B /* OrderManager.swift in Sources */,
+				0CFA329F27070C2300E3E29D /* ReviewCell.swift in Sources */,
 				0CC479BD26E524E4000B8848 /* Data.swift in Sources */,
 				0C926A5C26ED05B800FE4ABA /* SlideCell.swift in Sources */,
 				0CC479BB26E51E49000B8848 /* Coworking.swift in Sources */,

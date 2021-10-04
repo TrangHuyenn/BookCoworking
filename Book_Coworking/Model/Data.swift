@@ -25,6 +25,8 @@ let coworkingsList: [Coworking] = [
 
 var names: [String] = []
 var searchNames: [String] = []
+var reviews: [Review]?
+
 
 
 

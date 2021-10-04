@@ -25,8 +25,10 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         let signOutButton = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(didTabSignOut))
         navigationItem.rightBarButtonItem = signOutButton
+        navigationController?.navigationBar.tintColor = UIColor().mainColor()
         tableSetting.delegate = self
         tableSetting.dataSource = self
+        tableSetting.tableFooterView = UIView()
         setUpView()
         fetchData()
     }
@@ -45,16 +47,7 @@ class ProfileViewController: UIViewController {
     }
     
     func fetchData() {
-        let currentEmail = Auth.auth().currentUser?.email
-        labelEmail.text = currentEmail
-        
-        let db = Firestore.firestore()
-        let settings = db.settings
-        settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
-        let collection = db.collection("User")
-        let document = collection.document(currentEmail!)
-        document.getDocument { snapshot, error in
+        createDocument().getDocument { snapshot, error in
             guard let data = snapshot?.data() as? [String : String],
                   let name = data["Name"] else {
                 print("Data was empty")
@@ -62,7 +55,7 @@ class ProfileViewController: UIViewController {
             }
             let ref = data["profile_photo"]
             
-            self.downloadUrlForProfilePicture(path: ref!) { url in
+            self.downloadUrlForProfilePicture(path: ref ?? "") { url in
                 guard let url = url else {
                     return
                 }

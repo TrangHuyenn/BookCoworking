@@ -16,6 +16,7 @@ class OrderCell: UITableViewCell {
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbDateSetBooking: UILabel!
     @IBOutlet weak var lbName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         btnReview.layer.cornerRadius = 8
