@@ -75,12 +75,11 @@ class DetailCoworkingViewController: UIViewController {
     
     func configMapView() {
         let initialLocation = CLLocation(latitude: coworkingsList[index].latitude, longitude: coworkingsList[index].longtitude)
-//        print(coworkingsList[index].latitude)
         mapView.centerToLocation(initialLocation)
         mapView.addAnnotation(Artwork(
             title: coworkingsList[index].name,
             
-            coordinate: CLLocationCoordinate2D(latitude: 21.007119301215965, longitude: 105.80141072677009)
+            coordinate: CLLocationCoordinate2D(latitude: coworkingsList[index].latitude, longitude: coworkingsList[index].longtitude)
         ))
 
     }

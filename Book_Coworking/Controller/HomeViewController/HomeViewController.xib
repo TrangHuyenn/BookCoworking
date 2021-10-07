@@ -56,7 +56,6 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="125" id="JwR-QB-otG"/>
                         <constraint firstAttribute="trailing" secondItem="nme-Ly-k2X" secondAttribute="trailing" id="M7a-Sb-j18"/>
                         <constraint firstAttribute="bottom" secondItem="nme-Ly-k2X" secondAttribute="bottom" id="Yfx-PW-jKK"/>
                         <constraint firstItem="nme-Ly-k2X" firstAttribute="leading" secondItem="Ouo-hD-fYF" secondAttribute="leading" id="qTe-BA-uOX"/>
@@ -79,7 +78,6 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="n42-Mp-kFr" secondAttribute="trailing" id="0Cs-Je-gQ9"/>
-                        <constraint firstAttribute="height" constant="180" id="0ES-BQ-Z0a"/>
                         <constraint firstItem="n42-Mp-kFr" firstAttribute="top" secondItem="qX3-kd-buk" secondAttribute="top" id="dCV-28-Dis"/>
                         <constraint firstItem="n42-Mp-kFr" firstAttribute="leading" secondItem="qX3-kd-buk" secondAttribute="leading" id="jFO-de-EhR"/>
                         <constraint firstAttribute="bottom" secondItem="n42-Mp-kFr" secondAttribute="bottom" id="nYm-Cl-UUN"/>
@@ -140,9 +138,11 @@
                 <constraint firstItem="fYV-5z-tuF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sxg-Bh-00Q"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KrM-6N-YNF" secondAttribute="trailing" id="T1M-fs-AZz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qX3-kd-buk" secondAttribute="trailing" id="UEv-cd-ug8"/>
+                <constraint firstItem="Ouo-hD-fYF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.139509" id="ewH-uL-HdF"/>
                 <constraint firstItem="KrM-6N-YNF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gCm-ZJ-S6N"/>
                 <constraint firstItem="VBZ-EX-PTn" firstAttribute="top" secondItem="fYV-5z-tuF" secondAttribute="bottom" constant="10" id="mQb-KB-dla"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VBZ-EX-PTn" secondAttribute="trailing" constant="20" id="n2Q-yO-b19"/>
+                <constraint firstItem="qX3-kd-buk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.200893" id="pQ7-wp-mok"/>
                 <constraint firstItem="qX3-kd-buk" firstAttribute="top" secondItem="Ouo-hD-fYF" secondAttribute="bottom" constant="10" id="tVf-fA-Rz6"/>
             </constraints>
             <point key="canvasLocation" x="102.89855072463769" y="93.75"/>
