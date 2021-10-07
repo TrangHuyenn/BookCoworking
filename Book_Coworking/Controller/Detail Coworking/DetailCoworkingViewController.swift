@@ -12,15 +12,27 @@ import MapKit
 
 class DetailCoworkingViewController: UIViewController {
     
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tabelReview: UITableView!
     @IBOutlet weak var lbAddress: UILabel!
     @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var lbPrice: UILabel!
     @IBOutlet weak var imageColletionDetail: UICollectionView!
     
-    var index: Int = 0
-
+    var index: Int
+    
+    init() {
+        self.index = 0
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     let button = UIButton().button(text: "Book Now")
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +45,7 @@ class DetailCoworkingViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapButtonBook), for: .touchUpInside)
         navigationController?.isNavigationBarHidden = false
         configTableReview()
+        configMapView()
     }
     
     func configColletionView() {
@@ -54,14 +67,28 @@ class DetailCoworkingViewController: UIViewController {
         lbDescription.numberOfLines = 0
         lbPrice.text = "\(coworkingsList[index].price)đ /Hour"
         lbPrice.textColor = UIColor().mainColor()
-    
+        
         loadReview()
+    }
+    
+    //MARK: - Setup mapview
+    
+    func configMapView() {
+        let initialLocation = CLLocation(latitude: coworkingsList[index].latitude, longitude: coworkingsList[index].longtitude)
+//        print(coworkingsList[index].latitude)
+        mapView.centerToLocation(initialLocation)
+        mapView.addAnnotation(Artwork(
+            title: coworkingsList[index].name,
+            
+            coordinate: CLLocationCoordinate2D(latitude: 21.007119301215965, longitude: 105.80141072677009)
+        ))
+
     }
     
     func loadReview() {
         let db = Firestore.firestore()
         let reviewCollection = db.collection("Review")
-            
+        
         reviewCollection.whereField("Coworking", isEqualTo: coworkingsList[self.index].name)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -70,9 +97,9 @@ class DetailCoworkingViewController: UIViewController {
                     reviews = querySnapshot?.documents.map({Review.init(snapShot: $0)})
                     self.tabelReview.reloadData()
                 }
-        }
+            }
     }
-        
+    
     func setupLayout(){
         button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -129,5 +156,19 @@ extension DetailCoworkingViewController: UITableViewDataSource, UITableViewDeleg
         return 80
     }
     
-    
 }
+
+//MARK: - Extension MapView
+private extension MKMapView {
+    func centerToLocation(
+        _ location: CLLocation,
+        regionRadius: CLLocationDistance = 1000
+    ) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
+}
+

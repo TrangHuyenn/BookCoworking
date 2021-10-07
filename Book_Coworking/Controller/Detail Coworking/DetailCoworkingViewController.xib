@@ -14,6 +14,7 @@
                 <outlet property="lbAddress" destination="J9d-9j-Ke2" id="Anx-H0-8VI"/>
                 <outlet property="lbDescription" destination="0zR-mv-X0M" id="OuB-tG-b2s"/>
                 <outlet property="lbPrice" destination="Ib9-AH-ShS" id="xo8-ld-0Mz"/>
+                <outlet property="mapView" destination="qF5-Bc-N9h" id="OJu-JJ-Zgo"/>
                 <outlet property="tabelReview" destination="Zdx-6B-mrg" id="hsk-hu-8IQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -234,26 +235,26 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="iLF-RR-hWE">
-                                            <rect key="frame" x="20" y="104" width="374" height="196"/>
-                                        </imageView>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-Bc-N9h">
+                                            <rect key="frame" x="10" y="83.5" width="394" height="211.5"/>
+                                        </mapView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="J9d-9j-Ke2" firstAttribute="centerY" secondItem="E1k-d9-IB2" secondAttribute="centerY" id="3WM-Rz-M1X"/>
-                                        <constraint firstAttribute="trailing" secondItem="iLF-RR-hWE" secondAttribute="trailing" constant="20" id="4Fy-Xx-4SD"/>
-                                        <constraint firstAttribute="bottom" secondItem="iLF-RR-hWE" secondAttribute="bottom" id="5eO-X5-rWV"/>
-                                        <constraint firstItem="iLF-RR-hWE" firstAttribute="leading" secondItem="heO-zx-LuB" secondAttribute="leading" constant="20" id="GMo-SC-fc3"/>
+                                        <constraint firstAttribute="trailing" secondItem="qF5-Bc-N9h" secondAttribute="trailing" constant="10" id="FFx-dA-nSP"/>
+                                        <constraint firstItem="qF5-Bc-N9h" firstAttribute="top" secondItem="J9d-9j-Ke2" secondAttribute="bottom" constant="10" id="Jup-Io-IfO"/>
                                         <constraint firstAttribute="height" constant="300" id="N7C-H3-d1W"/>
                                         <constraint firstItem="fTL-xI-KB2" firstAttribute="top" secondItem="heO-zx-LuB" secondAttribute="top" constant="10" id="Tjk-eN-WEF"/>
                                         <constraint firstItem="GHd-Qz-yHC" firstAttribute="leading" secondItem="heO-zx-LuB" secondAttribute="leading" constant="20" id="ZP4-I9-Oya"/>
                                         <constraint firstAttribute="trailing" secondItem="GHd-Qz-yHC" secondAttribute="trailing" constant="20" id="bVJ-xS-eft"/>
                                         <constraint firstItem="GHd-Qz-yHC" firstAttribute="top" secondItem="fTL-xI-KB2" secondAttribute="bottom" constant="10" id="dom-Qk-JPa"/>
                                         <constraint firstAttribute="trailing" secondItem="J9d-9j-Ke2" secondAttribute="trailing" constant="20" id="eeD-Ix-Ixo"/>
-                                        <constraint firstItem="iLF-RR-hWE" firstAttribute="top" secondItem="E1k-d9-IB2" secondAttribute="bottom" constant="30.5" id="fWt-Fe-Sss"/>
+                                        <constraint firstAttribute="bottom" secondItem="qF5-Bc-N9h" secondAttribute="bottom" constant="5" id="kcL-Xy-kDb"/>
                                         <constraint firstItem="E1k-d9-IB2" firstAttribute="leading" secondItem="heO-zx-LuB" secondAttribute="leading" constant="20" id="khv-RC-8gX"/>
                                         <constraint firstAttribute="trailing" secondItem="fTL-xI-KB2" secondAttribute="trailing" constant="10" id="l3Q-oS-3bd"/>
                                         <constraint firstItem="J9d-9j-Ke2" firstAttribute="leading" secondItem="E1k-d9-IB2" secondAttribute="trailing" constant="5" id="nLf-ib-vsm"/>
+                                        <constraint firstItem="qF5-Bc-N9h" firstAttribute="leading" secondItem="heO-zx-LuB" secondAttribute="leading" constant="10" id="rIS-lz-qVp"/>
                                         <constraint firstItem="fTL-xI-KB2" firstAttribute="leading" secondItem="heO-zx-LuB" secondAttribute="leading" constant="10" id="tQc-Iu-xty"/>
                                         <constraint firstItem="E1k-d9-IB2" firstAttribute="top" secondItem="GHd-Qz-yHC" secondAttribute="bottom" constant="8" id="xff-w0-lMd"/>
                                     </constraints>
@@ -349,7 +350,6 @@
         </view>
     </objects>
     <resources>
-        <image name="empty" width="500" height="400"/>
         <image name="ic_air-conditioner" width="503.60699462890625" height="503.60699462890625"/>
         <image name="ic_coffee" width="512" height="512"/>
         <image name="ic_place" width="490" height="490"/>

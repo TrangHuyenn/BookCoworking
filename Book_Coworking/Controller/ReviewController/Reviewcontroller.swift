@@ -72,7 +72,6 @@ class Reviewcontroller: UIViewController {
         textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         textView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
-        
     }
     
     func configRate() {

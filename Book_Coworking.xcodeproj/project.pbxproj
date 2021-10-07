@@ -64,6 +64,7 @@
 		0CD61F3926FAF47200D784C5 /* SearchBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD61F3726FAF47200D784C5 /* SearchBarController.xib */; };
 		0CD73B0C26F244550096E5CA /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD73B0A26F244550096E5CA /* ImageCollectionCell.swift */; };
 		0CD73B0D26F244550096E5CA /* ImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */; };
+		0CE062CA270C61FB00C866A9 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE062C9270C61FB00C866A9 /* Artwork.swift */; };
 		0CE0747C26F5DDEF00227029 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0747A26F5DDEF00227029 /* CalendarCell.swift */; };
 		0CE0747D26F5DDEF00227029 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0747B26F5DDEF00227029 /* CalendarCell.xib */; };
 		0CE0748126F5F88400227029 /* PopupSetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0747F26F5F88400227029 /* PopupSetDateTime.swift */; };
@@ -151,6 +152,7 @@
 		0CD61F3726FAF47200D784C5 /* SearchBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarController.xib; sourceTree = "<group>"; };
 		0CD73B0A26F244550096E5CA /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionCell.xib; sourceTree = "<group>"; };
+		0CE062C9270C61FB00C866A9 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		0CE0747A26F5DDEF00227029 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		0CE0747B26F5DDEF00227029 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		0CE0747F26F5F88400227029 /* PopupSetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSetDateTime.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				0CD73B0B26F244550096E5CA /* ImageCollectionCell.xib */,
 				0C0D9E40270B482C00626828 /* ShowAllReviewController.swift */,
 				0C0D9E41270B482C00626828 /* ShowAllReviewController.xib */,
+				0CE062C9270C61FB00C866A9 /* Artwork.swift */,
 			);
 			path = "Detail Coworking";
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				0C0D9E42270B482C00626828 /* ShowAllReviewController.swift in Sources */,
 				0C89004F26FA32E80073821B /* OrderManager.swift in Sources */,
 				0CFA329F27070C2300E3E29D /* ReviewCell.swift in Sources */,
+				0CE062CA270C61FB00C866A9 /* Artwork.swift in Sources */,
 				0CC479BD26E524E4000B8848 /* Data.swift in Sources */,
 				0C926A5C26ED05B800FE4ABA /* SlideCell.swift in Sources */,
 				0CC479BB26E51E49000B8848 /* Coworking.swift in Sources */,
