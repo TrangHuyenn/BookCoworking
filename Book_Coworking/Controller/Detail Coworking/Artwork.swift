@@ -18,7 +18,6 @@ class Artwork: NSObject, MKAnnotation {
   ) {
     self.title = title
     self.coordinate = coordinate
-
     super.init()
   }
 

@@ -115,7 +115,8 @@ extension PaymentConfirmController: UITableViewDataSource, UITableViewDelegate {
         else if indexPath.row == 9 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PromotionCell", for: indexPath) as? PromotionCell
             cell?.btnPromotion.addTarget(self, action: #selector(tapEnterPromotion), for: .touchUpInside)
-            cell?.tfPromotion.text = promotionCode
+            cell?.tfPromotion.text = orderBook.promo
+            print("Promo code: \(orderBook.promo)")
             return cell!
         }
         return UITableViewCell()

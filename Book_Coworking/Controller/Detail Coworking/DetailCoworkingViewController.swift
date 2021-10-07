@@ -32,7 +32,7 @@ class DetailCoworkingViewController: UIViewController {
     
     let button = UIButton().button(text: "Book Now")
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +81,7 @@ class DetailCoworkingViewController: UIViewController {
             
             coordinate: CLLocationCoordinate2D(latitude: coworkingsList[index].latitude, longitude: coworkingsList[index].longtitude)
         ))
-
+        
     }
     
     func loadReview() {
