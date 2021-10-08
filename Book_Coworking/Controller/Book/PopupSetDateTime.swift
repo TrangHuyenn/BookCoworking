@@ -77,11 +77,11 @@ class PopupSetDateTime: UIViewController {
         else {
             if cellState.date >= Date() {
                 currentCell.lbDay.textColor = .black
-//                currentCell.isUserInteractionEnabled = true
+                currentCell.isUserInteractionEnabled = true
             }
             else {
                 currentCell.lbDay.textColor = .gray
-//                currentCell.isUserInteractionEnabled = false
+                currentCell.isUserInteractionEnabled = false
             }
         }
     }

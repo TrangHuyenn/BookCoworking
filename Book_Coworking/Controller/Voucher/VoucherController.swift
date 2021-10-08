@@ -34,6 +34,7 @@ extension VoucherController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    //MARK: - select voucher
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? VoucherCell
         UIPasteboard.general.string = cell?.lbCodePromotion.text! ?? ""
