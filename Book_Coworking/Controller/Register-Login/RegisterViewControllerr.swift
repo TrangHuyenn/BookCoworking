@@ -297,9 +297,12 @@ class RegisterViewControllerr: UIViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
                 
                 let db = Firestore.firestore()
+                let settings = db.settings
+                settings.areTimestampsInSnapshotsEnabled = true
+                db.settings = settings
                 let collection = db.collection("User")
                 let document = collection.document(email)
-                
+
                 document.setData(["Name": username, "Email": email])
                 ProgressHUD.show()
             }

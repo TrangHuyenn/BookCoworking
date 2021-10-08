@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController {
     func fetchData() {
         createDocument().getDocument { snapshot, error in
             guard let data = snapshot?.data() as? [String : String],
-                  let name = data["Name"] else {
+                  let name = data["Name"],let email = data["Email"] else {
                 print("Data was empty")
                 return
             }
@@ -71,6 +71,7 @@ class ProfileViewController: UIViewController {
             }
             DispatchQueue.main.async {
                 self.labelName.text = name
+                self.labelEmail.text = email
             }
         }
         
